@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Responsive Wb Site</title>
+	<meta name="veiewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		*{
+			margin: 0;padding:0;
+			box-sizing:border-box;
+		}
+		.banner{
+			width: 100%;
+			height: 100vh;
+			position: relative;
+			background: #3475ca;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.banner img{
+			position: absolute;
+			top: 0;left:0;
+			width: 100%;
+			height:100%;
+			object-fit: cover;
+			opacity: 0.27;
+		}
+        .banner header{
+      	width: 100%;
+      	position: absolute;
+      	top: 0;
+      	left: 0;
+      	padding: 38px;
+      	display: flex;
+      	justify-content:space-between;
+      	align-items: center;
+      	z-index: 2;
+      }
+      .banner header .logo{
+      	text-decoration: none;
+      	color: #fff;
+      	font-size: 25px;
+      	font-weight: 750;
+      	letter-spacing: 1px;
+      	text-transform: uppercase;
+      }
+		.banner .content{
+			position: relative;
+			max-width: 750px;/**/
+			text-align: center;
+		}
+		.banner .content h3{
+			color: #fff;
+			font-size:58px;
+		}
+      .banner .content p{
+      	color:#fff;
+      	font-size: 19px;
+      	letter-spacing: 1px;
+      	word-spacing: 2px;
+      	font-weight: 550;
+      } 
+      .banner header{
+      	width: 100%;
+      	position: absolute;
+      	top: 0;
+      	left: 0;
+      	padding: 38px;
+      	display: flex;
+      	justify-content:space-between;
+      	align-items: center;
+      }
+      .banner header .toggle{
+      	position: relative;
+      	top: 0;
+      	width: 40px;
+      	height: 40px;
+      	background:url(tgl2.png);
+      	background-size: cover;
+      	cursor: pointer;
+      	z-index: 3;
+      }
+      .about{
+      	position: relative;
+      	width: 100%;
+      	display: flex;
+      }
+      .about .contentBox{
+      	width: 50%;
+      	padding: 90px;
+      	background: #162c3b;
+      }
+    .headingPart{
+      	margin-bottom: 15px;
+      	font-size: 28px;
+      	font-weight: 550;
+      	letter-spacing: 1px;
+      	color: #fff;
+      }
+      .textPart{
+      	color: white;
+      	font-size: 17px;
+      	font-weight: 350;
+      	letter-spacing: 0.9px;
+      }
+      .about .imgBox{
+      	width: 50%;
+      	background: url("cock.jpg");
+      	background-size: cover;
+      	background-position: center;
+      }
+      .services{
+      	padding: 100px;
+      	text-align: center;
+      	background: #12222d;
+      }
+      .services .container{
+      	width: 100%;
+      	display: flex;
+      	justify-content: space-between;
+      	align-items: center;
+      	flex-wrap: wrap;
+      	margin-top: 60px;
+      }
+      .services .container .servicesBox{
+         position: relative;
+         background-size: white;
+         width: 350px;height: 300px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+      }
+      .services .container .servicesBox div{
+      	width: 100%;height: 100%;
+      }
+      .services .container .servicesBox div img{
+      	width: 100%;
+      	height: 100%;
+      	margin-bottom: 18px;
+      }
+      .services .container .servicesBox div h2{
+      	font-size: 25px;
+      	font-weight: 550;
+      	color: white;
+      	letter-spacing: 1px;
+      }
+      .techno{
+      	background: #3f8ffc;
+      	width: 100%;
+      	padding: 100px;
+      	display: flex;
+      	justify-content: space-between;
+      	align-items: center;
+      	padding-top: 230px;
+      	margin-top: -230px;
+      }
+      .techno .contentBox{
+      	max-width: 800px;
+      }
+      .techno .imgBox{
+      	max-width:300px;
+      	height: 100%;
+      }
+      .techno .imgBox img{
+      	max-width: 100%;
+      	height: 100%;
+      }
+      .client{
+      	background: #162c3b;
+      	padding: 150px;
+      	text-align: center;
+      }
+      .client .imgBox{
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         flex-wrap: wrap;
+         margin-top: 40px;
+      }
+      .client .imgBox img{
+      	max-width: 200px;
+      	margin: 20px;
+      	opacity: 0.5;
+      	cursor: pointer;
+      }
+      .client .imgBox img:hover{
+      	opacity: 1;
+      }
+      .test{
+      	position: relative;
+      	padding: 100px;
+      	background: #12222d;
+      	text-align: center;
+      }
+      .test .container{
+      	display: flex;
+      	justify-content:space-between;
+      	align-items: center;
+      	margin-top: 40px;
+      	flex-wrap:wrap;
+      }
+      .test .container .contentBox{
+        background: #fff;
+        padding: 60px 50px;
+        width: 550px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: left;
+      }
+      .test .container .contentBox p{
+      	color: #4d4c7d;
+      	font-size: 19px;
+      	margin-bottom: 25px;
+      	font-style: italic;
+      }
+      .test .container .contentBox h3{
+      	color: #363062;
+      	width: 100%;
+      	text-align: end;
+        margin-bottom: 0;
+        letter-spacing: 1px;
+        font-weight:950;
+        font-style: italic;
+      }
+      .about .imgBox2{
+      	background: url(computer.jpg);
+      	width: 50%;
+      	background-position: center;
+      	background-size: cover;
+      }
+      .contact{
+      	background:#162c3b;
+        padding: 95px;
+        text-align: center;
+      }
+      .redbc
+      	background: #ffa41b !important;
+      }
+      form .inputBox{
+      	margin-bottom: 35px;
+      }
+      form .inputBox input,textarea{
+      	width: 100%;
+      	background: transparent;
+      	box-shadow: none;
+      	border:none;
+      	border-bottom: 1px solid #d4ebd0;
+      	border-right: 1px solid #d4ebd0;
+      	border-top: 1px solid #d4ebd0;
+        font-weight:400;
+        font-size:15px;
+      	padding: 10px 5%;
+      }
+      form .inputBox input,textarea::placeholder{
+      	color:#856c8b;
+      	font-weight:550;
+      	font-style:italic;
+      	font-family: cursive;	
+      }
+      input:focus{
+      	background-color:#fde2e233 !important;
+      	border:none !important;
+      	outline: none !important;	
+      }
+      textarea:focus{
+      	background-color: #fde2e233 !important;
+      	border:none !important;
+      	outline: none !important;
+      }
+      form .inputBox input[type="submit"]{
+      	width: 160px;
+      	background:#ff1659c7;
+      	color: #fff;
+      	cursor: pointer;
+      	font-weight: 610;
+      	letter-spacing: 1.5px;
+      	margin-top: 15px;
+      	border:none;
+      }
+      form .inputBox input[type="submit"]:hover{
+      	background: #ff1659;
+      	color: #f5fcc1;
+        margin-top: 16px;
+        text-decoration: underline;
+      }
+      footer{
+      	background: #162c3b;
+      	padding: 22px 105px;
+      	display: flex;
+      	justify-content: space-between;
+      	align-items: center;
+      }
+      footer ul{
+      	display: flex;
+      	justify-content: center;
+      	align-items: center;
+      }
+      footer ul li{
+       	list-style: none;
+       }
+      footer ul li a{
+      	text-decoration: none;
+      	display: inline-block;
+      	margin: 0 20px;
+      }
+      footer ul li a img{
+      	filter: invert(1);
+      	max-width: 20px;
+      }
+       footer ul li a img:hover{
+       	filter: invert(0);
+       }
+       /*Responsive*/
+@media(max-width: 990px){
+     .banner header{
+        padding: 40px 50px;
+      }  
+      .banner header .logo{
+         font-size:40px;
+         margin-left: 20px;
+         letter-spacing: 1.5px;
+      }
+      .banner header .toggle{
+        width: 55px;
+        height: 55px;
+      }
+      .banner .content h3{
+      	font-size:4em;
+      	letter-spacing:2px;
+      	margin-top: 20px;
+      }
+      .banner .content p{
+      	font-size: 2.5em;
+        letter-spacing: 1px;
+        text-align: justify;
+        margin-top:55px;
+        font-style: italic;
+      }
+      .about{
+      	height: 50vh;
+      	flex-direction: column;
+      }
+      .about .contentBox{
+      	padding: 18px 15px;
+      	overflow: hidden;
+      	width:100%;
+      	display: block;
+      	min-height: 570px;
+      }
+      .about .imgBox{
+      	width: 100%;
+      	padding: 50px;
+      	min-height: 400px;
+      	margin-bottom: 38px;
+      }
+      .about .contentBox h2{
+      	font-size: 3em;
+      	font-weight: 550;
+      	margin-top: 0;
+      	margin-bottom: 14px;
+      }
+      .about .contentBox p{
+      	font-size: 37px;
+      	letter-spacing: 1.4px;
+      	word-spacing: 2px;
+      	font-weight:530;
+      	align-items: center;
+      	margin-bottom:20px;
+      }
+      .services .container {
+      	width: 100%;
+      	display: block;
+      }
+      .services .container .servicesBox{
+      	width: 100%;
+      	margin: 100px auto;
+      }
+      .services .container .servicesBox div h2{
+      	font-size:3em;
+      	font-weight: 600;
+      	letter-spacing: 1.5px;
+      }
+      .techno{
+      	padding-top: 700px;
+      	margin-top: -700px;
+      }
+}
+
+	</style>
+</head>
+<body>
+    <!-- Banner -->
+   <div class="banner">
+   	  <header>
+   	  	<a href="#" class="logo">Brand</a>
+   	  	<div class="toggle"></div>
+   	  </header>
+   	     <img src="2.jpg">
+   	  <div class="content">
+   	  	<h3>Suces by Design</h3>
+   	  	<p class="textPart">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+   	  	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+   	  	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+   	  	consequat. Duis aute irure dolor in reprehenderit in </p>
+   	  </div>
+   </div>
+    <!--About -->
+     <div class="about">
+     	<div class="contentBox">
+     		<h2 class="headingPart">About-Us</h2>
+     		<p class="textPart">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+     		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+     		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+     		consequat. Duis aute irure dolor
+            <br><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris t in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur</p>
+     	</div>
+     	<div class="imgBox">
+     		<img src="2.jpg">
+     	</div>
+     </div>
+    <!--Service -->
+    <div class="services">
+    	<h2 class="headingPart">Our Services</h2>
+    	<p class="textPart">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    	  <div class="container">
+             <div class="servicesBox">
+             	<div>
+             		<img src="sport.jpg">
+             		<h2>Chauss</h2>
+             	</div>
+             </div>
+               <div class="servicesBox">
+             	<div>
+             		<img src="product.jpg">
+             		<h2>Chauss</h2>
+             	</div>
+             </div>
+               <div class="servicesBox">
+             	<div>
+             		<img src="sport.jpg">
+             		<h2>Chauss</h2>
+             	</div>
+             </div>
+
+    	  </div>
+    </div>
+    <!--Technology -->
+    <div class="techno">
+    	<div class="contentBox">
+    		<h2 class="headingPart">We use this methode</h2>
+    		<p class="textPart">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    	</div>
+    	<div class="imgBox">
+    		<img src="3.jpg">
+    	</div>
+    </div>
+    <!--Client -->
+      <div class="client">
+      	<h2 class="headingPart">Our Client</h2>
+      	<p class="textPart">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+      	quis in reprehenderit in voluptate velit esse
+      	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+      	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      	  <div class="imgBox">
+      	  	<img src="1.jpg">
+      	  	<img src="2.jpg">
+      	  	<img src="3.jpg">
+      	  	<img src="4.jpg">
+      	  </div>
+      </div>
+    <!--Test -->
+      <div class="test">
+      	<h2 class="headingPart">What Our Client Says</h2>
+      	<div class="container">
+      		<div class="contentBox">
+      			<div>
+      				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+      				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      				consequat. Duis aute irure dolor in reprehenderit in voluptate </p>
+      				<h3>Someone Famous</h3>
+      			</div></div>
+      		<div class="contentBox">
+      			<div>
+      				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+      				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      				consequat. Duis aute irure dolor in reprehenderit in voluptate </p>
+      				<h3>Someone Famous</h3>
+      			</div>
+      		</div>
+      	</div>
+      </div>
+     <!--Contact -->
+     <div class="contact">
+     	<h2 class="headingPart">Contact-Us</h2>
+     	<p class="textPart">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+     	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+     	quis dolor in reprehenderit in voluptate velit esse
+     	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+     	proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+     </div>
+     <!-- -->
+          <div class="about">
+     	<div class="contentBox redbck">
+     	   <form>
+     	   	 <div class="inputBox">
+     	   	 	<input type="text" name="" placeholder="First name">
+     	   	 </div>
+     	   	 <div class="inputBox">
+     	   	 	<input type="text" name="" placeholder="Last name">
+     	   	 </div>
+     	   	 <div class="inputBox">
+     	   	 	<input type="email" name="" placeholder="Address@Email..">
+     	   	 </div>
+     	   	 <div class="inputBox">
+     	   	 	<input type="text" name="" placeholder="Phone Number">
+     	   	 </div>
+     	   	 <textarea placeholder="Write Your Message Here :!" style="min-height: 140px;;box-sizing: border-box;padding:18px 20px;"></textarea>
+     	   	 <div class="inputBox">
+     	   	 	<input type="submit" name="" value="Send New">
+     	   	 </div>
+     	   </form>
+     	</div>
+     	<div class="imgBox imgBox2"></div>
+     </div>
+     <!-- Footer -->
+     <footer>
+     	<p class="textPart">
+     		Design & Developed By OmarTo
+     	</p>
+     	<p class="textPart" style="margin-left:17%;">Contact-Us By:</p>
+     	<ul>
+     		<li><a href="#"><img src="facebook.png"></a></li>
+     		<li><a href="#"><img src="instagram.png"></a></li>
+     		<li><a href="#"><img src="whatsapp.png"></a></li>
+     		<li><a href="#"><img src="twitter2.png"></a></li>
+     	</ul>
+     </footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
